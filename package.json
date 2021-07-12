@@ -11,5 +11,8 @@
     "javawscript"
   ],
   "author": "Heather Mathies",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
 }

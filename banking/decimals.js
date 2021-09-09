@@ -10,13 +10,12 @@ const roundUp2 = (a, b) => {
   return Math.round(a + b);
 };
 
-const absValue = (a,b) => {
-  return Math.abs(a,b)
-}
+const absValue = (a, b) => {
+  return Math.abs(a, b);
+};
 const mathTrunc = (a) => {
-  return Math.trunc(a)
-}
-
+  return Math.trunc(a);
+};
 
 module.exports = {
   roundDown,

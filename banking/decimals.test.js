@@ -6,7 +6,7 @@ const {
   mathTrunc,
 } = require("./decimals");
 
-const {addTwoNums} = require('./basic-add')
+const { addTwoNums } = require("./basic-add");
 
 describe("should round down", () => {
   test("should round down to 0 using Math.floor", () => {
@@ -17,10 +17,10 @@ describe("should round down", () => {
     expect(mathTrunc(43.23)).toEqual(43);
   });
 
-  test('should add two decimals and return integer only', () => {
+  test("should add two decimals and return integer only", () => {
     const num = addTwoNums(1.2, 1.3);
-    expect(mathTrunc(num)).toEqual(2)
-  })
+    expect(mathTrunc(num)).toEqual(2);
+  });
 });
 
 describe("should round Up", () => {

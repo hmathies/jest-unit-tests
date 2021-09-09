@@ -20,7 +20,7 @@ describe("should round down", () => {
   test("should add two decimals and return integer only", () => {
     const num = addTwoNums(1.2, 1.3);
     expect(mathTrunc(num)).toEqual(2);
-    expect(num).toBeLessThan(3)
+    expect(num).toBeLessThan(3);
   });
 });
 

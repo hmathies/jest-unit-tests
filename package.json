@@ -13,6 +13,7 @@
   "author": "Heather Mathies",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^27.0.1",
     "jest": "^27.0.6"
   }
 }

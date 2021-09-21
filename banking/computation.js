@@ -22,6 +22,8 @@ const basicWithdrawal = (customerId, amt) => {
     return currAmt - amt;
   } else if (currAmt < amt) {
     return "Withdraw amount is greater than funds available";
+  } else {
+    return "Invalid Data";
   }
 };
 

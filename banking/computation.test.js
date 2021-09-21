@@ -53,4 +53,11 @@ describe("Computation Tests", () => {
     expect(typeof result).toBe("string");
     expect(result).toBe("Withdraw amount is greater than funds available");
   });
+
+  it("should basicWithdrawal return invalid if not a valid customer or amount", () => {
+    const customerId = 10;
+    const result = basicWithdrawal(customerId, "$200");
+    expect(typeof result).toBe("string");
+    expect(result).toBe("Invalid Data");
+  });
 });

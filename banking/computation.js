@@ -2,11 +2,6 @@ const findCustomer = (id) => {
   // TODO: declare const using filter
   return users.find((person) => person.id === id);
 };
-// const basicWithdrawal = (user, amt) => {
-//   users.find((person) => {
-//     person.name === user ? });
-//   return a - b;
-// };
 const getCurrCheckAmt = (user) => {
   for (const [key, value] of Object.entries(user)) {
     if (key === "accounts") {
@@ -15,6 +10,18 @@ const getCurrCheckAmt = (user) => {
         .map((acct) => acct.currAmt)
         .reduce((a, acct) => acct.currAmt);
     }
+  }
+};
+
+const basicWithdrawal = (customerId, amt) => {
+  let currAmt;
+  users.find((person) =>
+    person.id === customerId ? (currAmt = getCurrCheckAmt(person)) : null
+  );
+  if (currAmt >= amt) {
+    return currAmt - amt;
+  } else if (currAmt < amt) {
+    return "Withdraw amount is greater than funds available";
   }
 };
 
@@ -38,7 +45,7 @@ const users = [
 ];
 
 module.exports = {
-  // basicWithdrawal,
+  basicWithdrawal,
   findCustomer,
   users,
   getCurrCheckAmt,

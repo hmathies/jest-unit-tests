@@ -48,19 +48,18 @@ describe("should return absolute value", () => {
     expect(result).toBe(1);
   });
 
-  describe('should compute two decimals and return a decimal value', () => {
-    test('should add two decimals and returning floating number', () => {
-      let a = '0.2';
-      let b = '0.3';
-      
-      expect(addDecimals(a, b)).toBe(0.5)
+  describe("should compute two decimals and return a decimal value", () => {
+    test("should add two decimals and returning floating number", () => {
+      let a = "0.2";
+      let b = "0.3";
 
+      expect(addDecimals(a, b)).toBe(0.5);
     });
 
-    test('should toFixed return  a string and rounds as necessary', () => {
-      let a = '0.3456';
-      let b = '0.48899';
-      expect(addDecmialsToFixed(a,b)).toBe('0.83')
-    })
-  })
+    test("should toFixed return  a string and rounds as necessary", () => {
+      let a = "0.3456";
+      let b = "0.48899";
+      expect(addDecmialsToFixed(a, b)).toBe("0.83");
+    });
+  });
 });

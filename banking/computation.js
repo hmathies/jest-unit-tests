@@ -4,16 +4,22 @@ const findCustomer = (id) => {
 };
 const getCurrCheckAmt = (user) => {
   for (const [key, value] of Object.entries(user)) {
-    while(key === "accounts") {
-      return value.filter((acct) => acct.name === "check").map((check) => check.currAmt).reduce((a, amt) => amt.currAmt);
+    while (key === "accounts") {
+      return value
+        .filter((acct) => acct.name === "check")
+        .map((check) => check.currAmt)
+        .reduce((a, amt) => amt.currAmt);
     }
   }
 };
 
 const getCurrSavAmt = (user) => {
   for (const [key, value] of Object.entries(user)) {
-    while(key === "accounts") {
-      return value.filter((acct) => acct.name === "sav").map((sav) => sav.currAmt).reduce((a, amt) => amt.currAmt);
+    while (key === "accounts") {
+      return value
+        .filter((acct) => acct.name === "sav")
+        .map((sav) => sav.currAmt)
+        .reduce((a, amt) => amt.currAmt);
     }
     /* removing if statement because it makes the code coverage go down */
     // if (key === "accounts") {
@@ -23,7 +29,7 @@ const getCurrSavAmt = (user) => {
     //     .reduce((a, acct) => acct.currAmt);
     // }
   }
-}
+};
 
 const basicWithdrawal = (customerId, amt) => {
   let currAmt;
@@ -63,5 +69,5 @@ module.exports = {
   findCustomer,
   users,
   getCurrCheckAmt,
-  getCurrSavAmt
+  getCurrSavAmt,
 };

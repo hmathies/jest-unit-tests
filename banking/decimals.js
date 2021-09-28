@@ -17,10 +17,19 @@ const mathTrunc = (a) => {
   return Math.trunc(a);
 };
 
+const addDecimals = (a,b) => {
+  return parseFloat(a) + parseFloat(b);
+}
+
+const addDecmialsToFixed = (a,b) => {
+  return (parseFloat(a) + parseFloat(b)).toFixed(2);
+}
 module.exports = {
   roundDown,
   roundUp,
   roundUp2,
   absValue,
   mathTrunc,
+  addDecimals,
+  addDecmialsToFixed
 };

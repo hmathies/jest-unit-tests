@@ -4,6 +4,8 @@ const {
   roundUp2,
   absValue,
   mathTrunc,
+  addDecimals,
+  addDecmialsToFixed,
 } = require("./decimals");
 
 const { addTwoNums } = require("./basic-add");
@@ -45,4 +47,20 @@ describe("should return absolute value", () => {
     let result = absValue(param1 - param2);
     expect(result).toBe(1);
   });
+
+  describe('should compute two decimals and return a decimal value', () => {
+    test('should add two decimals and returning floating number', () => {
+      let a = '0.2';
+      let b = '0.3';
+      
+      expect(addDecimals(a, b)).toBe(0.5)
+
+    });
+
+    test('should toFixed return  a string and rounds as necessary', () => {
+      let a = '0.3456';
+      let b = '0.48899';
+      expect(addDecmialsToFixed(a,b)).toBe('0.83')
+    })
+  })
 });
